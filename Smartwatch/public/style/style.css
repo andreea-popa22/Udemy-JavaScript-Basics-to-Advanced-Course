@@ -12,6 +12,9 @@ header .logo{
     cursor: pointer;
 }
 
+#time{
+    visibility: hidden;
+}
 
 #article{
     background-color: lightblue;
