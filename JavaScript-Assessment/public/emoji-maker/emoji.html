@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+    <title>The Emoji Maker</title>
+    <link rel="stylesheet" href="./emoji.css" />
+    <script src="https://kit.fontawesome.com/35c398e458.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script src="./emoji.js"></script>
+<body>
+    <main>        
+        <div id="main-container">
+            <a id="back-to-homepage" href="../index.html">Back to Home</a>
+            <h1 id="main-heading">The Emoji Maker</h1>
+            <div id="card-wrapper">
+                <div id="select-skin-card" class="card left-card">
+                    <h3>Select Color</h3>
+                    <div>
+                        <img id="yellow-skin" onclick="yellowSkin()" src="./assets/skin/yellow.png" />
+                        <img id="green-skin" onclick="greenSkin()" src="./assets/skin/green.png" />
+                        <img id="red-skin" onclick="redSkin()" src="./assets/skin/red.png" />
+                    </div>
+                    <i class="fas fa-chevron-right next-step show-eyes-card" onclick="selectEyesCard()"></i>
+                </div>
+                <div id="select-eyes-card" class="card left-card">
+                    <h3>Select Eyes</h3>
+                    <div>
+                        <img id="eye-normal" src="./assets/eyes/normal.png" onclick="normalEyes()"/>
+                        <img id="eye-closed" src="./assets/eyes/closed.png" onclick="closedEyes()"/>
+                        <img id="eye-long" src="./assets/eyes/long.png" onclick="longEyes()"/>
+                    </div>
+                    <div>
+                        <img id="eye-laughing" src="./assets/eyes/laughing.png" onclick="laughingEyes()"/>
+                        <img id="eye-rolling" src="./assets/eyes/rolling.png" onclick="rollingEyes()"/>
+                        <img id="eye-winking" src="./assets/eyes/winking.png" onclick="winkingEyes()"/>
+                    </div>
+                    <i id="show-skin-card" class="fas fa-chevron-left previous-step" onclick="selectSkinCard()"></i>
+                    <i id="show-mouth-card" class="fas fa-chevron-right next-step" onclick="selectMouthCard()"></i>
+                </div>
+                <div id="select-mouth-card" class="card left-card">
+                    <h3>Select Mouth</h3>
+                    <div>
+                        <img id="mouth-open" src="./assets/mouth/open.png" onclick="openMouth()"/>
+                        <img id="mouth-smiling" src="./assets/mouth/smiling.png" onclick="smilingMouth()"/>
+                        <img id="mouth-straight" src="./assets/mouth/straight.png" onclick="straightMouth()"/>
+                    </div>
+                    <div>
+                        <img id="mouth-sad" src="./assets/mouth/sad.png" onclick="sadMouth()"/>
+                        <img id="mouth-teeth" src="./assets/mouth/teeth.png" onclick="teethMouth()"/>
+                    </div>
+                    <i class="fas fa-chevron-left previous-step show-eyes-card" onclick="selectEyesCard()"></i>
+                </div>
+
+                <div class="card right-card">
+                    <div id="emoji">
+                        <img id="skin" src="" />
+                        <img id="eyes" src="" />
+                        <img id="mouth" src="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
