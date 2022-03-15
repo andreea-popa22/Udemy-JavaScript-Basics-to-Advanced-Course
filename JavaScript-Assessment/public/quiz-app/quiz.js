@@ -32,7 +32,7 @@ $(document).ready(function() {
             var newInputOption = document.createElement('input');
             newInputOption.setAttribute('type', 'radio');
             newInputOption.setAttribute('name', 'q' + id);
-            newInputOption.setAttribute('value', id);
+            newInputOption.setAttribute('value', i);
             newInputOption.required = true;
             var newOptionText = document.createElement('p');
             var optionTextNode = document.createTextNode(option[i]);
@@ -55,7 +55,7 @@ $(document).ready(function() {
             for (var i = 0; i < response.length; i++) {
                 quizList.append(createQuestion(response[i].id, response[i].question, response[i].answer, response[i].options))
                 answer.push(response[i].answer);
-                console.log(response[i]);
+                console.log(response[i])
             }
             console.log(answer);
             quizList.append(submitBtn);
@@ -69,12 +69,10 @@ $(document).ready(function() {
     function checkAnswer(Form){
         var i = 0;
         Object.keys(Form).forEach(question => {
-            // console.log(question);        // the name of the current question.
-            // console.log(Form[question]); // the value of the current question.
             if(Form[question] == answer[i]){
                 score += 1;
             }
-            i++;
+            i++
         });
         console.log(score);
         scoreCount.html(score);
